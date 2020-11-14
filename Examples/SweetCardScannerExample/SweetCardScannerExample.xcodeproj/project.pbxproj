@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4B5C62F255FB0F10099F695 /* SweetCardScannerExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C62E255FB0F10099F695 /* SweetCardScannerExampleApp.swift */; };
+		A4B5C631255FB0F10099F695 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C630255FB0F10099F695 /* ContentView.swift */; };
+		A4B5C633255FB0F30099F695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B5C632255FB0F30099F695 /* Assets.xcassets */; };
+		A4B5C636255FB0F30099F695 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B5C635255FB0F30099F695 /* Preview Assets.xcassets */; };
+		A4B5C641255FB0F40099F695 /* SweetCardScannerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C640255FB0F40099F695 /* SweetCardScannerExampleTests.swift */; };
+		A4B5C64C255FB0F40099F695 /* SweetCardScannerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C64B255FB0F40099F695 /* SweetCardScannerExampleUITests.swift */; };
+		A4B5C668255FB2D10099F695 /* SweetCardScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A4B5C667255FB2D10099F695 /* SweetCardScanner */; };
+		A4B5C669255FB2D10099F695 /* SweetCardScanner in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A4B5C667255FB2D10099F695 /* SweetCardScanner */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A4B5C670255FB3030099F695 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C66F255FB3030099F695 /* ResultView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4B5C63D255FB0F40099F695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4B5C623255FB0F10099F695 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4B5C62A255FB0F10099F695;
+			remoteInfo = SweetCardScannerExample;
+		};
+		A4B5C648255FB0F40099F695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4B5C623255FB0F10099F695 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4B5C62A255FB0F10099F695;
+			remoteInfo = SweetCardScannerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A4B5C66A255FB2D10099F695 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A4B5C669255FB2D10099F695 /* SweetCardScanner in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A4B5C62B255FB0F10099F695 /* SweetCardScannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetCardScannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B5C62E255FB0F10099F695 /* SweetCardScannerExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetCardScannerExampleApp.swift; sourceTree = "<group>"; };
+		A4B5C630255FB0F10099F695 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4B5C632255FB0F30099F695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4B5C635255FB0F30099F695 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4B5C637255FB0F30099F695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B5C63C255FB0F40099F695 /* SweetCardScannerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetCardScannerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B5C640255FB0F40099F695 /* SweetCardScannerExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetCardScannerExampleTests.swift; sourceTree = "<group>"; };
+		A4B5C642255FB0F40099F695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B5C647255FB0F40099F695 /* SweetCardScannerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetCardScannerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4B5C64B255FB0F40099F695 /* SweetCardScannerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetCardScannerExampleUITests.swift; sourceTree = "<group>"; };
+		A4B5C64D255FB0F40099F695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B5C662255FB2980099F695 /* SweetCardScanner */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SweetCardScanner; path = ../..; sourceTree = "<group>"; };
+		A4B5C66F255FB3030099F695 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4B5C628255FB0F10099F695 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B5C668255FB2D10099F695 /* SweetCardScanner in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B5C639255FB0F40099F695 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B5C644255FB0F40099F695 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4B5C622255FB0F10099F695 = {
+			isa = PBXGroup;
+			children = (
+				A4B5C62D255FB0F10099F695 /* SweetCardScannerExample */,
+				A4B5C63F255FB0F40099F695 /* SweetCardScannerExampleTests */,
+				A4B5C64A255FB0F40099F695 /* SweetCardScannerExampleUITests */,
+				A4B5C62C255FB0F10099F695 /* Products */,
+				A4B5C662255FB2980099F695 /* SweetCardScanner */,
+				A4B5C666255FB2D10099F695 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4B5C62C255FB0F10099F695 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5C62B255FB0F10099F695 /* SweetCardScannerExample.app */,
+				A4B5C63C255FB0F40099F695 /* SweetCardScannerExampleTests.xctest */,
+				A4B5C647255FB0F40099F695 /* SweetCardScannerExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4B5C62D255FB0F10099F695 /* SweetCardScannerExample */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5C62E255FB0F10099F695 /* SweetCardScannerExampleApp.swift */,
+				A4B5C630255FB0F10099F695 /* ContentView.swift */,
+				A4B5C66F255FB3030099F695 /* ResultView.swift */,
+				A4B5C632255FB0F30099F695 /* Assets.xcassets */,
+				A4B5C637255FB0F30099F695 /* Info.plist */,
+				A4B5C634255FB0F30099F695 /* Preview Content */,
+			);
+			path = SweetCardScannerExample;
+			sourceTree = "<group>";
+		};
+		A4B5C634255FB0F30099F695 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5C635255FB0F30099F695 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4B5C63F255FB0F40099F695 /* SweetCardScannerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5C640255FB0F40099F695 /* SweetCardScannerExampleTests.swift */,
+				A4B5C642255FB0F40099F695 /* Info.plist */,
+			);
+			path = SweetCardScannerExampleTests;
+			sourceTree = "<group>";
+		};
+		A4B5C64A255FB0F40099F695 /* SweetCardScannerExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5C64B255FB0F40099F695 /* SweetCardScannerExampleUITests.swift */,
+				A4B5C64D255FB0F40099F695 /* Info.plist */,
+			);
+			path = SweetCardScannerExampleUITests;
+			sourceTree = "<group>";
+		};
+		A4B5C666255FB2D10099F695 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4B5C62A255FB0F10099F695 /* SweetCardScannerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4B5C650255FB0F40099F695 /* Build configuration list for PBXNativeTarget "SweetCardScannerExample" */;
+			buildPhases = (
+				A4B5C627255FB0F10099F695 /* Sources */,
+				A4B5C628255FB0F10099F695 /* Frameworks */,
+				A4B5C629255FB0F10099F695 /* Resources */,
+				A4B5C66A255FB2D10099F695 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SweetCardScannerExample;
+			packageProductDependencies = (
+				A4B5C667255FB2D10099F695 /* SweetCardScanner */,
+			);
+			productName = SweetCardScannerExample;
+			productReference = A4B5C62B255FB0F10099F695 /* SweetCardScannerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4B5C63B255FB0F40099F695 /* SweetCardScannerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4B5C653255FB0F40099F695 /* Build configuration list for PBXNativeTarget "SweetCardScannerExampleTests" */;
+			buildPhases = (
+				A4B5C638255FB0F40099F695 /* Sources */,
+				A4B5C639255FB0F40099F695 /* Frameworks */,
+				A4B5C63A255FB0F40099F695 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4B5C63E255FB0F40099F695 /* PBXTargetDependency */,
+			);
+			name = SweetCardScannerExampleTests;
+			productName = SweetCardScannerExampleTests;
+			productReference = A4B5C63C255FB0F40099F695 /* SweetCardScannerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4B5C646255FB0F40099F695 /* SweetCardScannerExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4B5C656255FB0F40099F695 /* Build configuration list for PBXNativeTarget "SweetCardScannerExampleUITests" */;
+			buildPhases = (
+				A4B5C643255FB0F40099F695 /* Sources */,
+				A4B5C644255FB0F40099F695 /* Frameworks */,
+				A4B5C645255FB0F40099F695 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4B5C649255FB0F40099F695 /* PBXTargetDependency */,
+			);
+			name = SweetCardScannerExampleUITests;
+			productName = SweetCardScannerExampleUITests;
+			productReference = A4B5C647255FB0F40099F695 /* SweetCardScannerExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4B5C623255FB0F10099F695 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					A4B5C62A255FB0F10099F695 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					A4B5C63B255FB0F40099F695 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = A4B5C62A255FB0F10099F695;
+					};
+					A4B5C646255FB0F40099F695 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = A4B5C62A255FB0F10099F695;
+					};
+				};
+			};
+			buildConfigurationList = A4B5C626255FB0F10099F695 /* Build configuration list for PBXProject "SweetCardScannerExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4B5C622255FB0F10099F695;
+			productRefGroup = A4B5C62C255FB0F10099F695 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4B5C62A255FB0F10099F695 /* SweetCardScannerExample */,
+				A4B5C63B255FB0F40099F695 /* SweetCardScannerExampleTests */,
+				A4B5C646255FB0F40099F695 /* SweetCardScannerExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4B5C629255FB0F10099F695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B5C636255FB0F30099F695 /* Preview Assets.xcassets in Resources */,
+				A4B5C633255FB0F30099F695 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B5C63A255FB0F40099F695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B5C645255FB0F40099F695 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4B5C627255FB0F10099F695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B5C631255FB0F10099F695 /* ContentView.swift in Sources */,
+				A4B5C62F255FB0F10099F695 /* SweetCardScannerExampleApp.swift in Sources */,
+				A4B5C670255FB3030099F695 /* ResultView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B5C638255FB0F40099F695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B5C641255FB0F40099F695 /* SweetCardScannerExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4B5C643255FB0F40099F695 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B5C64C255FB0F40099F695 /* SweetCardScannerExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4B5C63E255FB0F40099F695 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4B5C62A255FB0F10099F695 /* SweetCardScannerExample */;
+			targetProxy = A4B5C63D255FB0F40099F695 /* PBXContainerItemProxy */;
+		};
+		A4B5C649255FB0F40099F695 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4B5C62A255FB0F10099F695 /* SweetCardScannerExample */;
+			targetProxy = A4B5C648255FB0F40099F695 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A4B5C64E255FB0F40099F695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4B5C64F255FB0F40099F695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4B5C651255FB0F40099F695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SweetCardScannerExample/Preview Content\"";
+				DEVELOPMENT_TEAM = 6U769Q36UT;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SweetCardScannerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.aaronlab.SweetCardScannerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4B5C652255FB0F40099F695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SweetCardScannerExample/Preview Content\"";
+				DEVELOPMENT_TEAM = 6U769Q36UT;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = SweetCardScannerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.aaronlab.SweetCardScannerExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A4B5C654255FB0F40099F695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6U769Q36UT;
+				INFOPLIST_FILE = SweetCardScannerExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.aaronlab.SweetCardScannerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetCardScannerExample.app/SweetCardScannerExample";
+			};
+			name = Debug;
+		};
+		A4B5C655255FB0F40099F695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6U769Q36UT;
+				INFOPLIST_FILE = SweetCardScannerExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.aaronlab.SweetCardScannerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetCardScannerExample.app/SweetCardScannerExample";
+			};
+			name = Release;
+		};
+		A4B5C657255FB0F40099F695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6U769Q36UT;
+				INFOPLIST_FILE = SweetCardScannerExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.aaronlab.SweetCardScannerExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SweetCardScannerExample;
+			};
+			name = Debug;
+		};
+		A4B5C658255FB0F40099F695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6U769Q36UT;
+				INFOPLIST_FILE = SweetCardScannerExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.aaronlab.SweetCardScannerExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SweetCardScannerExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4B5C626255FB0F10099F695 /* Build configuration list for PBXProject "SweetCardScannerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4B5C64E255FB0F40099F695 /* Debug */,
+				A4B5C64F255FB0F40099F695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4B5C650255FB0F40099F695 /* Build configuration list for PBXNativeTarget "SweetCardScannerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4B5C651255FB0F40099F695 /* Debug */,
+				A4B5C652255FB0F40099F695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4B5C653255FB0F40099F695 /* Build configuration list for PBXNativeTarget "SweetCardScannerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4B5C654255FB0F40099F695 /* Debug */,
+				A4B5C655255FB0F40099F695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4B5C656255FB0F40099F695 /* Build configuration list for PBXNativeTarget "SweetCardScannerExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4B5C657255FB0F40099F695 /* Debug */,
+				A4B5C658255FB0F40099F695 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4B5C667255FB2D10099F695 /* SweetCardScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SweetCardScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A4B5C623255FB0F10099F695 /* Project object */;
+}

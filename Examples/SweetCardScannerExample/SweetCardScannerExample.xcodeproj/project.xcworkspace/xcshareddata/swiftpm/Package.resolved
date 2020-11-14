@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Reg",
+        "repositoryURL": "https://github.com/yhkaplan/Reg.git",
+        "state": {
+          "branch": null,
+          "revision": "c8f1f51bc088708b3b3ecf04523b5bedd6914222",
+          "version": "0.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
