@@ -8,9 +8,6 @@
 import SwiftUI
 import SweetCardScanner
 
-import SwiftUI
-import SweetCardScanner
-
 struct ContentView: View {
     // MARK: - PROPERTIES
     
