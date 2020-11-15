@@ -32,12 +32,15 @@ SweetCardScanner is a fast and simple Card Scanner library written in Swift, bas
    ```Swift
    var body: some View {
      SweetCardScanner()
+        .onDismiss {
+          // Do something when the view dismissed.
+        }
         .onError { error in
-          // This 'error' above gives you 'CreditCardScannerError'
+          // The 'error' above gives you 'CreditCardScannerError' struct below.
           print(error)
         }
         .onSuccess { card in
-          // This card above gives you 'CreditCard'
+          // The card above gives you 'CreditCard' struct below.
           print(card)
         }
    }
