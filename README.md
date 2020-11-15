@@ -3,7 +3,7 @@
 
 # SweetCardScanner
 
-SweetCardScanner is a fast and simple Card Scanner library written in Swift, based on [CreditCardScanner](https://github.com/yhkaplan/credit-card-scanner) and [Reg](https://github.com/yhkaplan/Reg) libraries by [@yhkaplan](https://github.com/yhkaplan) so that users can pay much more easily by capturing their credit/debit card with their rear camera.
+SweetCardScanner is a fast and simple Card Scanner library written in Swift, based on [CreditCardScanner](https://github.com/yhkaplan/credit-card-scanner) and [Reg](https://github.com/yhkaplan/Reg) libraries by [@yhkaplan](https://github.com/yhkaplan) so that users can pay much more easily by capturing their credit/debit card with the rear camera.
 
 <center>
 <img src="./preview.gif" width="260">
