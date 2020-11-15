@@ -27,7 +27,7 @@ SweetCardScanner is a fast and simple Card Scanner library written in Swift, bas
 1. Add `NSCameraUsageDescription` into `Info.plist` for Camera Useage Description.
 2. `import SweetCardScanner` on top of the `ContentView.swift`.
 3. Now, you can use like `SweetCardScanner()` inside of the body.
-4. Also, you can use completion clousures, such as `.onDismiss`, `.onError`, `onSuccess` right after `SweetCardScanner()` like below.
+4. Also, you can use completion clousures, such as `.onDismiss`, `.onError`, `.onSuccess` right after `SweetCardScanner()` like below.
 
    ```Swift
    var body: some View {
