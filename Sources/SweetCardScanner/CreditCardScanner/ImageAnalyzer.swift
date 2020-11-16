@@ -54,9 +54,9 @@ final class ImageAnalyzer {
         let creditCardNumber: Regex = #"(?:\d[ -]*?){13,16}"#
         let month: Regex = #"(\d{2})\/\d{2}"#
         let year: Regex = #"\d{2}\/(\d{2})"#
-        let wordsToSkip = ["mastercard", "jcb", "visa", "express", "bank", "card", "platinum", "reward", "check", "credit", "american", "express"]
+        let wordsToSkip = ["mastercard", "jcb", "visa", "express", "bank", "card", "platinum", "reward", "check", "credit", "american", "express", "cashbag", "keb", "nhcard", "global", "hyundai", "zero", "kakaobank", "thru", "authorized", "signature", "authorized signature", "hyundai card", "nonghyup", "payon", "money"]
         // These may be contained in the date strings, so ignore them only for names
-        let invalidNames = ["expiration", "valid", "since", "from", "until", "month", "year", "member", "since"]
+        let invalidNames = ["expiration", "valid", "since", "from", "until", "month", "year", "member"]
         let name: Regex = #"([A-z]{2,}\h([A-z.]+\h)?[A-z]{2,})"#
 
         guard let results = request.results as? [VNRecognizedTextObservation] else { return }
