@@ -45,8 +45,9 @@ open class CreditCardScannerViewController: UIViewController {
         fatalError("Not implemented")
     }
     
-    override open func viewDidLoad() {
-        super.viewDidLoad()
+    override open func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.analyzer = ImageAnalyzer(delegate: self)
         layoutSubviews()
         AVCaptureDevice.authorize { [weak self] authoriazed in
             // This is on the main thread.
