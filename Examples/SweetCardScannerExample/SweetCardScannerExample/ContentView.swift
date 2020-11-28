@@ -25,20 +25,34 @@ struct ContentView: View {
                 ZStack {
                     
                     NavigationLink(
-                        destination: ResultView(card: card),
+                        destination: ResultView(card: card)
+                            .onDisappear {
+                                /*
+                                 You will be able to turn on the camera again
+                                 when you come back to this view from the result view
+                                 by changing your own customized navigation status.
+                                 */
+                                self.navigationStatus = .ready
+                            },
                         tag: NavigationStatus.pop,
                         selection: $navigationStatus) {
                         EmptyView()
                     }
                     
-                    SweetCardScanner()
-                        .onError { err in
-                            print(err)
-                        }
-                        .onSuccess { card in
-                            self.card = card
-                            self.navigationStatus = .pop
-                        }
+                    /*
+                     You will be able to turn off the camera when you move to the result view
+                     with the `if` statement below.
+                     */
+                    if navigationStatus == .ready {
+                        SweetCardScanner()
+                            .onError { err in
+                                print(err)
+                            }
+                            .onSuccess { card in
+                                self.card = card
+                                self.navigationStatus = .pop
+                            }
+                    }
                     
                     RoundedRectangle(cornerRadius: 16)
                         .stroke()

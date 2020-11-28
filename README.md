@@ -28,6 +28,7 @@ SweetCardScanner is a fast and simple Card Scanner library written in Swift, bas
 2. `import SweetCardScanner` on top of the `ContentView.swift`.
 3. Now, you can use like `SweetCardScanner()` inside of the body.
 4. Also, you can use completion clousures, such as `.onDismiss`, `.onError`, `.onSuccess` right after `SweetCardScanner()` like below.
+5. If you want to turn off the camera when you move to the result view, you will need to use your own customized navigation status trick. [(Check the example below)](#example)
 
    ```Swift
    var body: some View {
@@ -92,20 +93,34 @@ struct ContentView: View {
                 ZStack {
 
                     NavigationLink(
-                        destination: ResultView(card: card),
+                        destination: ResultView(card: card)
+                            .onDisappear {
+                                /*
+                                 You will be able to turn on the camera again
+                                 when you come back to this view from the result view
+                                 by changing your own customized navigation status.
+                                 */
+                                self.navigationStatus = .ready
+                            },
                         tag: NavigationStatus.pop,
                         selection: $navigationStatus) {
                         EmptyView()
                     }
 
-                    SweetCardScanner()
-                        .onError { err in
-                            print(err)
-                        }
-                        .onSuccess { card in
-                            self.card = card
-                            self.navigationStatus = .pop
-                        }
+                    /*
+                     You will be able to turn off the camera when you move to the result view
+                     with the `if` statement below.
+                     */
+                    if navigationStatus == .ready {
+                        SweetCardScanner()
+                            .onError { err in
+                                print(err)
+                            }
+                            .onSuccess { card in
+                                self.card = card
+                                self.navigationStatus = .pop
+                            }
+                    }
 
                     RoundedRectangle(cornerRadius: 16)
                         .stroke()
