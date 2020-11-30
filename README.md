@@ -29,25 +29,35 @@ SweetCardScanner is a fast and simple Card Scanner library written in Swift, bas
 
 1. Add `NSCameraUsageDescription` into `Info.plist` for Camera Useage Description.
 2. `import SweetCardScanner` on top of the `ContentView.swift`.
-3. Now, you can use like `SweetCardScanner()` inside of the body.
-4. Also, you can use completion clousures, such as `.onDismiss`, `.onError`, `.onSuccess` right after `SweetCardScanner()` like below.
-5. If you want to turn off the camera when you move to the result view, you will need to use your own customized navigation status trick. [(Check the example below)](#example)
-
+3. Now, you can use like `SweetCardScanner()` or `SweetCardScanner(wordsToSkip: Array<String>?, invalidNames: Array<String>?)` inside of the body.
+4. With `wordsToSkip: Array<String>?`, you can add some words "in lowercase" to try to skip in recognition to improve the performance like bank names, such as "td", "td banks", "cibc", and so on.
+5. With `invalidNames: Array<String>?`, you can try to add some words "in lowercase" for invalid names, such as "thru", "authorized", "signature".
+6. Also, you can use completion clousures, such as `.onDismiss`, `.onError`, `.onSuccess` right after `SweetCardScanner()` like below.
+7. If you want to turn off the camera when you move to the result view, you will need to use your own customized navigation status trick. [(Check the example below)](#example)
    ```Swift
    var body: some View {
-     SweetCardScanner()
+       /*
+        You can add some words "in lowercase" to try to skip in recognition to improve the performance like bank names,
+        such as "td", "td banks", "cibc", and so on.
+        Also you can try to add some words "in lowercase" for invalid names, such as "thru", "authorized", "signature".
+        Or you can just simply usw liek "SweetCardScanner()"
+        */
+        SweetCardScanner(
+            wordsToSkip: ["td", "td bank", "cibc"],
+            invalidNames: ["thru", "authorized", "signature"]
+        )
         .onDismiss {
-          // Do something when the view dismissed.
+            // Do something when the view dismissed.
         }
         .onError { error in
-          // The 'error' above gives you 'CreditCardScannerError' struct below.
-          print(error)
+            // The 'error' above gives you 'CreditCardScannerError' struct below.
+            print(error)
         }
         .onSuccess { card in
-          // The card above gives you 'CreditCard' struct below.
-          print(card)
+            // The card above gives you 'CreditCard' struct below.
+            print(card)
         }
-   }
+    }
    ```
 
 ## CreditCardScannerError
@@ -129,6 +139,7 @@ struct ContentView: View {
                          You can add some words "in lowercase" to try to skip in recognition to improve the performance like bank names,
                          such as "td", "td banks", "cibc", and so on.
                          Also you can try to add some words "in lowercase" for invalid names, such as "thru", "authorized", "signature".
+                         Or you can just simply usw liek "SweetCardScanner()"
                          */
                         SweetCardScanner(
                             wordsToSkip: ["td", "td bank", "cibc"],
