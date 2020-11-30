@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SweetCardScanner
+import struct SweetCardScanner.CreditCard
 
 struct ResultView: View {
     // MARK: - PROPERTIES
