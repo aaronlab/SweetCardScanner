@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A42A65E0257532C6003FA790 /* CreditCardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A65DF257532C6003FA790 /* CreditCardUtils.swift */; };
+		A42A65E8257532F4003FA790 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A65E7257532F4003FA790 /* String+Extensions.swift */; };
 		A4B5C547255FA8C80099F695 /* ImageAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C541255FA8C80099F695 /* ImageAnalyzer.swift */; };
 		A4B5C548255FA8C80099F695 /* ImageRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C542255FA8C80099F695 /* ImageRatio.swift */; };
 		A4B5C549255FA8C80099F695 /* CreditCardScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C543255FA8C80099F695 /* CreditCardScannerViewController.swift */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A42A65DF257532C6003FA790 /* CreditCardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardUtils.swift; sourceTree = "<group>"; };
+		A42A65E7257532F4003FA790 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		A4B5C538255FA8930099F695 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A4B5C541255FA8C80099F695 /* ImageAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAnalyzer.swift; sourceTree = "<group>"; };
 		A4B5C542255FA8C80099F695 /* ImageRatio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRatio.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				A4B5C543255FA8C80099F695 /* CreditCardScannerViewController.swift */,
 				A4B5C541255FA8C80099F695 /* ImageAnalyzer.swift */,
 				A4B5C542255FA8C80099F695 /* ImageRatio.swift */,
+				A42A65DF257532C6003FA790 /* CreditCardUtils.swift */,
+				A42A65E7257532F4003FA790 /* String+Extensions.swift */,
 			);
 			path = CreditCardScanner;
 			sourceTree = "<group>";
@@ -355,8 +361,10 @@
 				OBJ_42 /* SweetCardScanner.swift in Sources */,
 				A4B5C54C255FA8C80099F695 /* CreditCard.swift in Sources */,
 				A4B5C547255FA8C80099F695 /* ImageAnalyzer.swift in Sources */,
+				A42A65E8257532F4003FA790 /* String+Extensions.swift in Sources */,
 				A4B5C549255FA8C80099F695 /* CreditCardScannerViewController.swift in Sources */,
 				A4B5C54A255FA8C80099F695 /* CameraView.swift in Sources */,
+				A42A65E0257532C6003FA790 /* CreditCardUtils.swift in Sources */,
 				A4B5C548255FA8C80099F695 /* ImageRatio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

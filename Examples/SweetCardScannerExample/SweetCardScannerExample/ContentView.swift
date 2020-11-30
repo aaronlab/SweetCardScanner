@@ -44,9 +44,14 @@ struct ContentView: View {
                      with the `if` statement below.
                      */
                     if navigationStatus == .ready {
+                        /*
+                         You can add some words "in lowercase" to try to skip in recognition to improve the performance like bank names,
+                         such as "td", "td banks", "cibc", and so on.
+                         Also you can try to add some words "in lowercase" for invalid names, such as "thru", "authorized", "signature".
+                         */
                         SweetCardScanner(
                             wordsToSkip: ["td", "td bank", "cibc"],
-                            invalidNames: ["thru"]
+                            invalidNames: ["thru", "authorized", "signature"]
                         )
                         .onError { err in
                             print(err)
