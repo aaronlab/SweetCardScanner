@@ -48,6 +48,7 @@ struct ContentView: View {
                          You can add some words "in lowercase" to try to skip in recognition to improve the performance like bank names,
                          such as "td", "td banks", "cibc", and so on.
                          Also you can try to add some words "in lowercase" for invalid names, such as "thru", "authorized", "signature".
+                         Or you can just simply usw liek "SweetCardScanner()"
                          */
                         SweetCardScanner(
                             wordsToSkip: ["td", "td bank", "cibc"],
