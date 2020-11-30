@@ -44,14 +44,17 @@ struct ContentView: View {
                      with the `if` statement below.
                      */
                     if navigationStatus == .ready {
-                        SweetCardScanner()
-                            .onError { err in
-                                print(err)
-                            }
-                            .onSuccess { card in
-                                self.card = card
-                                self.navigationStatus = .pop
-                            }
+                        SweetCardScanner(
+                            wordsToSkip: ["td", "td bank", "cibc"],
+                            invalidNames: ["thru"]
+                        )
+                        .onError { err in
+                            print(err)
+                        }
+                        .onSuccess { card in
+                            self.card = card
+                            self.navigationStatus = .pop
+                        }
                     }
                     
                     RoundedRectangle(cornerRadius: 16)

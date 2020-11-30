@@ -13,10 +13,17 @@ public struct SweetCardScanner: UIViewControllerRepresentable {
     private var onError: ((CreditCardScannerError) -> Void)?
     private var onSuccess: ((CreditCard) -> Void)?
     
-    public init() {}
+    // For Custom Words
+    private var wordsToSkip: Array<String>?
+    private var invalidNames: Array<String>?
+    
+    public init(wordsToSkip: Array<String>? = nil, invalidNames: Array<String>? = nil) {
+        self.wordsToSkip = wordsToSkip
+        self.invalidNames = invalidNames
+    }
     
     public func makeUIViewController(context: Context) -> some UIViewController {
-        let viewController = CreditCardScannerViewController(delegate: context.coordinator)
+        let viewController = CreditCardScannerViewController(delegate: context.coordinator, wordsToSkip: wordsToSkip, invalidNames: invalidNames)
         return viewController
     }
     

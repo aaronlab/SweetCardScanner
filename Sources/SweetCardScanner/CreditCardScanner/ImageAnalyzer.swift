@@ -23,10 +23,16 @@ final class ImageAnalyzer {
 
     private var selectedCard = CreditCard()
     private var predictedCardInfo: [Candidate: PredictedCount] = [:]
+    
+    // For Custom Words
+    private var wordsToSkip: Array<String>?
+    private var invalidNames: Array<String>?
 
     private weak var delegate: ImageAnalyzerProtocol?
-    init(delegate: ImageAnalyzerProtocol) {
+    init(delegate: ImageAnalyzerProtocol, wordsToSkip: Array<String>? = nil, invalidNames: Array<String>? = nil) {
         self.delegate = delegate
+        self.wordsToSkip = wordsToSkip
+        self.invalidNames = invalidNames
     }
 
     // MARK: - Vision-related
@@ -54,9 +60,15 @@ final class ImageAnalyzer {
         let creditCardNumber: Regex = #"(?:\d[ -]*?){13,16}"#
         let month: Regex = #"(\d{2})\/\d{2}"#
         let year: Regex = #"\d{2}\/(\d{2})"#
-        let wordsToSkip = ["mastercard", "jcb", "visa", "express", "bank", "card", "platinum", "reward", "check", "credit", "american", "express", "cashbag", "keb", "nhcard", "global", "hyundai", "zero", "kakaobank", "thru", "authorized", "signature", "authorized signature", "hyundai card", "nonghyup", "payon", "money"]
+        var wordsToSkip = ["mastercard", "jcb", "visa", "express", "bank", "card", "platinum", "reward"]
+        if let safeSkipWords = strongSelf.wordsToSkip {
+            wordsToSkip += safeSkipWords
+        }
         // These may be contained in the date strings, so ignore them only for names
-        let invalidNames = ["expiration", "valid", "since", "from", "until", "month", "year", "member"]
+        var invalidNames = ["expiration", "valid", "since", "from", "until", "month", "year"]
+        if let safeInvalidNames = strongSelf.invalidNames {
+            invalidNames += safeInvalidNames
+        }
         let name: Regex = #"([A-z]{2,}\h([A-z.]+\h)?[A-z]{2,})"#
 
         guard let results = request.results as? [VNRecognizedTextObservation] else { return }

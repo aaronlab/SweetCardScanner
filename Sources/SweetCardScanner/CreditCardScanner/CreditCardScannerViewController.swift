@@ -29,14 +29,20 @@ open class CreditCardScannerViewController: UIViewController {
     private lazy var cameraView: CameraView = CameraView(delegate: self)
     
     /// Analyzes text data for credit card info
-    private lazy var analyzer = ImageAnalyzer(delegate: self)
+    private lazy var analyzer = ImageAnalyzer(delegate: self, wordsToSkip: self.wordsToSkip, invalidNames: self.invalidNames)
     
     private weak var delegate: CreditCardScannerViewControllerDelegate?
     
+    /// For Custom Words
+    private var wordsToSkip: Array<String>?
+    private var invalidNames: Array<String>?
+    
     // MARK: - Vision-related
     
-    public init(delegate: CreditCardScannerViewControllerDelegate?) {
+    public init(delegate: CreditCardScannerViewControllerDelegate?, wordsToSkip: Array<String>? = nil, invalidNames: Array<String>? = nil) {
         self.delegate = delegate
+        self.wordsToSkip = wordsToSkip
+        self.invalidNames = invalidNames
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,7 +53,7 @@ open class CreditCardScannerViewController: UIViewController {
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.analyzer = ImageAnalyzer(delegate: self)
+        self.analyzer = ImageAnalyzer(delegate: self, wordsToSkip: self.wordsToSkip, invalidNames: self.invalidNames)
         layoutSubviews()
         AVCaptureDevice.authorize { [weak self] authoriazed in
             // This is on the main thread.
