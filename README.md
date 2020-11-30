@@ -68,6 +68,14 @@ public struct CreditCard {
   public var number: String?
   public var name: String?
   public var expireDate: DateComponents?
+  public var year: Int { expireDate?.year ?? 0 } // This returns "yyyy"
+  public var month: Int { expireDate?.month ?? 0 } // This returns "MM"
+  /*
+  CardVender below returns an element of an enum:
+  Unknown, Amex, Visa, MasterCard, Diners, Discover, JCB, Elo, Hipercard, UnionPay
+  */
+  public var vendor: CardVendor { CreditCardUtil.getVendor(candidate: self.number) }
+  public var isNotExpired: Bool? { CreditCardUtil.isValid(candidate: self.expireDate) }
 }
 ```
 
@@ -76,6 +84,8 @@ public struct CreditCard {
 You can customize your own view with SweetCardScanner, and SwiftUI like below.
 
 ```Swift
+// ContentView.swift
+
 import SwiftUI
 import SweetCardScanner
 
@@ -115,14 +125,22 @@ struct ContentView: View {
                      with the `if` statement below.
                      */
                     if navigationStatus == .ready {
-                        SweetCardScanner()
-                            .onError { err in
-                                print(err)
-                            }
-                            .onSuccess { card in
-                                self.card = card
-                                self.navigationStatus = .pop
-                            }
+                        /*
+                         You can add some words "in lowercase" to try to skip in recognition to improve the performance like bank names,
+                         such as "td", "td banks", "cibc", and so on.
+                         Also you can try to add some words "in lowercase" for invalid names, such as "thru", "authorized", "signature".
+                         */
+                        SweetCardScanner(
+                            wordsToSkip: ["td", "td bank", "cibc"],
+                            invalidNames: ["thru", "authorized", "signature"]
+                        )
+                        .onError { err in
+                            print(err)
+                        }
+                        .onSuccess { card in
+                            self.card = card
+                            self.navigationStatus = .pop
+                        }
                     }
 
                     RoundedRectangle(cornerRadius: 16)
@@ -143,6 +161,38 @@ struct ContentView: View {
 // MARK: - NavigationStatus
 enum NavigationStatus {
     case ready, pop
+}
+```
+
+```Swift
+// ResultView.swift
+import SwiftUI
+import struct SweetCardScanner.CreditCard
+
+struct ResultView: View {
+    // MARK: - PROPERTIES
+
+    let card: CreditCard?
+
+    // MARK: - BODY
+
+    var body: some View {
+
+        VStack {
+            Text("Card Holder Name: \(card?.name ?? "N/A")")
+            Text("Number: \(card?.number ?? "N/A")")
+            Text("Expire Year: \(String(card?.year ?? 00))")
+            Text("Expire Month: \(String(card?.month ?? 00))")
+            Text("Card Vendor: \(card?.vendor.rawValue ?? "Unknown")")
+
+            if let isNotExpired = card?.isNotExpired {
+                isNotExpired ? Text("Expired: Not Expired") : Text("Expired: Expired")
+            }
+
+        }
+
+    }
+
 }
 ```
 
