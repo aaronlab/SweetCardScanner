@@ -19,7 +19,7 @@ SweetCardScanner is a fast and simple Card Scanner library written in Swift, bas
 
 ## Installation
 
-- In Xcode, add SwiftPM with the URL of this repository:
+- In Xcode, add the URL of this repository in SwiftPM:
 
   ```http
   https://github.com/aaronLab/SweetCardScanner.git
