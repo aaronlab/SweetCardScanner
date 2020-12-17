@@ -15,7 +15,7 @@ SweetCardScanner is a fast and simple Card Scanner library written in Swift, bas
 ## Requirements
 
 - iOS 13.0+ (due to SwiftUI, Vision Framework)
-  - Tesed on iOS 14.1 with iPhone X
+  - Tested on iOS 14.1 with iPhone X
 
 ## Installation
 
