@@ -2,7 +2,7 @@
 ![Platform: iOS 13+](https://img.shields.io/badge/platform-iOS%2013%2B-blue?style=flat&logo=apple)
 ![SwiftPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen?style=flat&logo=swift)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey?style=flat)](https://github.com/aaronLab/SweetCardScanner/blob/main/LICENSE)
-[![Release version](https://img.shields.io/badge/release-v1.0.2-blue)](https://github.com/aaronLab/SweetCardScanner/releases)
+[![Release version](https://img.shields.io/badge/release-v1.0.3-blue)](https://github.com/aaronLab/SweetCardScanner/releases)
 
 # SweetCardScanner
 
