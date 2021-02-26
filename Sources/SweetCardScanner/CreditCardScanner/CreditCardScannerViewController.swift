@@ -53,7 +53,7 @@ open class CreditCardScannerViewController: UIViewController {
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.analyzer = ImageAnalyzer(delegate: self, wordsToSkip: self.wordsToSkip, invalidNames: self.invalidNames)
+        
         layoutSubviews()
         AVCaptureDevice.authorize { [weak self] authoriazed in
             // This is on the main thread.
